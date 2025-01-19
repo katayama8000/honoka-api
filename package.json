@@ -1,0 +1,15 @@
+{
+  "name": "honoka-api",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.16",
+    "hono": "^4.6.17"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "wrangler": "^3.101.0"
+  }
+}
