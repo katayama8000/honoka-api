@@ -1,8 +1,8 @@
 import { Hono } from 'hono'
 import { supabase } from './lib/supabase';
-import { env } from "hono/adapter"
 
 type Bindings = {
+  APP_ENV: string;
   SUPABASE_KEY: string;
 }
 
@@ -20,7 +20,6 @@ app.get("/test", async (c) => {
 
 app.get("/env", (c) => {
   const v = c.env.SUPABASE_KEY;
-  console.log(v);
   return c.text(v);
 })
 
