@@ -2,7 +2,8 @@
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = "https://jqovxmsueffhddmyqcew.supabase.co";
-const supabaseKey = process.env.SUPABASE_KEY;
+// const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseKey = "123"
 
 if (!supabaseKey) {
     console.error("Missing Supabase Key");
