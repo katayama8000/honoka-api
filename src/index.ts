@@ -13,7 +13,7 @@ app.get('/', (c) => {
 })
 
 app.get("/test", async (c) => {
-  const data = await supabase.from("dev_couples").select("*");
+  const { data } = await supabase(c.env.SUPABASE_KEY).from("dev_couples").select("*");
   console.log(data);
   return c.json(data);
 });
