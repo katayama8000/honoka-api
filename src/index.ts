@@ -14,13 +14,13 @@ app.get('/', (c) => {
 
 app.get("/test", async (c) => {
   const { data } = await supabase(c.env.SUPABASE_KEY).from("dev_couples").select("*");
-  console.log(data);
   return c.json(data);
 });
 
-app.get("/env", (c) => {
-  const v = c.env.SUPABASE_KEY;
-  return c.text(v);
-})
+app.get("/version", (c) => {
+  const { version } = require("../package.json");
+  return c.json({ version });
+});
+
 
 export default app
